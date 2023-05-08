@@ -1,0 +1,193 @@
+@font-face {
+  font-family: "Norse Bold";
+  src: url("assets/Norse-Bold.otf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, sans-serif;
+  background-color: rgb(173, 92, 83);
+}
+
+.signup-container {
+  min-height: 70vh;
+  min-width: 65%;
+  background-color: ghostwhite;
+  box-shadow: 4px 4px 10px 2px rgb(0, 0, 0, 0.3);
+  border-radius: 6px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.image-background {
+  flex-basis: 30%;
+  flex-shrink: 0;
+  background-image: url("assets/kevin-snow-nnvSN8MXLIc-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.logo-container {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 1em 0;
+}
+
+.logo {
+  max-height: 75px;
+  object-fit: cover;
+}
+
+.logo-text {
+  font-family: "Norse Bold", sans-serif;
+  font-size: 3rem;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.form-upper-text p {
+  max-width: 60ch;
+  font-weight: bold;
+  line-height: 1.3;
+  padding: 1em 2em;
+}
+
+.form-container {
+  background-color: white;
+  padding: 1em 2em;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 0.8rem;
+  gap: 6px;
+  max-width: 80%;
+}
+
+.form input {
+  appearance: none;
+  border: 1px solid rgb(225, 225, 225);
+  font-size: 0.9rem;
+  font-family: system-ui, sans-serif;
+  height: 25px;
+  border-radius: 4px;
+}
+
+.form input + span {
+  position: relative;
+  display: block;
+}
+
+.form input[type="password"].error {
+  border: 1px solid red;
+}
+
+.form input[type="password"].error + .message::after {
+  content: "* Passwords do not match";
+  color: red;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+}
+
+.form input:focus-visible {
+  outline: 0;
+  border: 2px solid lightsteelblue;
+  box-shadow: 1px 1px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.form-button-container {
+  margin-top: 2em;
+  padding: 0 2em;
+}
+
+.form-button-container button {
+  appearance: none;
+  padding: 1em 2em;
+  border-radius: 4px;
+  background-color: steelblue;
+  border: 1px solid ghostwhite;
+  color: white;
+  font-weight: 500;
+  font-size: 0.8rem;
+  font-family: system-ui;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.form-button-container button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.form-button-container button:hover {
+  background-color: lightblue;
+  color: black;
+}
+
+.form-button-container button:focus {
+  outline: 1px dotted black;
+}
+
+.form-button-container p {
+  font-size: 0.7rem;
+  margin-bottom: 2em;
+}
+
+.form-button-container a {
+  color: steelblue;
+  text-underline-offset: 3px;
+}
+
+@media screen and (max-width: 600px) {
+  .signup-container {
+    flex-flow: column nowrap;
+  }
+  .logo-container {
+    position: static;
+  }
+  .image-background {
+    background-position-y: 50%;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-item {
+    max-width: 100%;
+  }
+
+  .form-button-container {
+    text-align: center;
+  }
+}

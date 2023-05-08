@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <title>Sign-up Form</title>
+</head>
+
+<body>
+  <div class="signup-container">
+    <div class="image-background">
+      <div class="logo-container">
+        <img class="logo" src="assets/odin-lined.png" alt="Odin Logo">
+        <p class="logo-text">Odin</p>
+      </div>
+    </div>
+    <div class="info-container">
+      <div class="form-upper-text">
+        <p>This is not a real online service! You know you need something like this in your life to help you realize
+          your deepest dreams.<br> Sign up <em>now</em> to get started.</p>
+        <p>You <em>know</em> you want to.</p>
+      </div>
+      <section class="form-container">
+        <h2>Let's do this!</h2>
+        <form action="" class="form" id="subscribe-form">
+          <p class="form-item">
+            <label for="first-name">First Name</label>
+            <input required type="text" name="first-name" id="first-name">
+          </p>
+          <p class="form-item">
+            <label for="last-name">Last Name</label>
+            <input required type="text" name="last-name" id="last-name">
+          </p>
+          <p class="form-item">
+            <label for="email">Email</label>
+            <input required type="email" name="email" id="email">
+          </p>
+          <p class="form-item">
+            <label for="phone-number">Phone Number</label>
+            <input required type="tel" name="phone-number" id="phone-number">
+          </p>
+          <p class="form-item">
+            <label for="password">Password</label>
+            <input required class="error" type="password" name="password" id="password">
+            <span class="message"></span>
+          </p>
+          <p class="form-item">
+            <label for="confirm-pwd">Confirm Password</label>
+            <input required class="error" type="password" name="confirm-pwd" id="confirm-pwd">
+          </p>
+        </form>
+      </section>
+      <div class="form-button-container">
+        <button id="submit-button" form="subscribe-form" type="submit" disabled>Create Account</button>
+        <p>Already have an account? <a href="/">Log in</a></p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
